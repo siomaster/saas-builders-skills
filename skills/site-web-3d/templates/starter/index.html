@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- À ADAPTER : titre, description, couleur -->
+  <title>Marque — Accroche</title>
+  <meta name="description" content="Description de la marque en une phrase." />
+  <meta name="theme-color" content="#063d22" />
+  <link rel="icon" href="/img/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Urbanist uniquement, graisses 300/400/500 (pas de gras) -->
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <div class="loader" aria-hidden="true">
+    <img class="loader__logo" src="/img/logo.png" alt="" />
+    <div class="loader__bar"><span></span></div>
+    <div class="loader__count">0</div>
+  </div>
+
+  <!-- ========== NAVIGATION : visible et lisible dès l'arrivée ========== -->
+  <header class="nav">
+    <a class="nav__logo" href="#top" aria-label="Accueil"><img src="/img/logo.png" alt="Marque" /></a>
+    <nav class="nav__links" aria-label="Navigation principale">
+      <a href="#apropos">À propos</a>
+      <a href="#offre">Offre</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav__right">
+      <a class="nav__phone" href="tel:+000000000"><i data-icon="call"></i><span>+00 00 00 00 00</span></a>
+      <a class="btn btn--accent nav__cta magnet" href="#contact">Action</a>
+      <button class="nav__burger" aria-label="Ouvrir le menu" aria-expanded="false"><i data-icon="menu"></i></button>
+    </div>
+  </header>
+
+  <div class="menu" aria-hidden="true">
+    <button class="menu__close" aria-label="Fermer le menu"><i data-icon="close"></i></button>
+    <nav>
+      <a href="#apropos">À propos</a>
+      <a href="#offre">Offre</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn--accent" href="#contact">Action principale</a>
+  </div>
+
+  <main>
+    <!-- ========== HERO : décor + nuages 3D + mot géant + sujet détouré devant ========== -->
+    <section class="hero" id="top">
+      <div class="hero__stage">
+        <img class="hero__sky" src="/img/hero-bg.jpg" alt="" />
+        <canvas class="hero__clouds" aria-hidden="true"></canvas>
+        <div class="hero__scrim" aria-hidden="true"></div>
+        <!-- À ADAPTER : un mot court (5-8 lettres), une lettre par span -->
+        <div class="hero__word" aria-hidden="true"><span>M</span><span>A</span><span>R</span><span>Q</span><span>U</span><span>E</span></div>
+        <div class="hero__subject-wrap">
+          <img class="hero__subject" src="/img/subject.webp" alt="Description du sujet" />
+        </div>
+        <div class="hero__copy">
+          <p class="eyebrow">Sur-titre de la marque</p>
+          <h1 class="hero__title">Titre principal <span class="accent">mot clé</span></h1>
+          <p class="hero__lead">Une phrase qui dit la promesse, simple et concrète.</p>
+          <div class="hero__ctas">
+            <a class="btn btn--accent magnet" href="#contact">Action principale <i data-icon="arrow"></i></a>
+            <a class="btn btn--glass" href="#apropos">Découvrir</a>
+          </div>
+        </div>
+        <!-- 2e message : apparaît APRÈS le passage du sujet -->
+        <div class="hero__copy2" aria-hidden="true">
+          <p class="eyebrow">Deuxième temps</p>
+          <p class="hero__big">Message fort</p>
+        </div>
+        <div class="hero__hint" aria-hidden="true"><span>Faites défiler</span><i></i></div>
+        <div class="hero__whiteout" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- ========== À PROPOS : titre + bento (photos + chiffres avec icônes) + valeurs ========== -->
+    <section class="about" id="apropos">
+      <div class="about__intro">
+        <p class="eyebrow eyebrow--brand">Sur-titre</p>
+        <h2 class="title blur-text">Une phrase de positionnement claire et ambitieuse.</h2>
+        <p class="about__text">Deux ou trois phrases issues des vrais textes de la marque : mission, histoire, différence.</p>
+      </div>
+      <div class="bento">
+        <figure class="bento__photo bento__photo--tall">
+          <img src="/img/photo-1.jpg" alt="" loading="lazy" />
+          <figcaption><span class="chip"><i data-icon="location"></i> Légende</span></figcaption>
+        </figure>
+        <article class="stat spot"><i data-icon="clock"></i><p class="stat__value"><span data-count="24">0</span><small>h/24</small></p><p class="stat__label">Libellé du chiffre</p></article>
+        <article class="stat spot"><i data-icon="star"></i><p class="stat__value"><span data-count="12500" data-format="fr">0</span></p><p class="stat__label">Libellé du chiffre</p></article>
+        <article class="stat spot"><i data-icon="shield"></i><p class="stat__value"><span data-count="100">0</span><small>%</small></p><p class="stat__label">Libellé du chiffre</p></article>
+        <article class="stat spot"><i data-icon="globe"></i><p class="stat__value">FR · EN</p><p class="stat__label">Libellé</p></article>
+        <figure class="bento__photo bento__photo--wide">
+          <img src="/img/photo-2.jpg" alt="" loading="lazy" />
+          <figcaption><span class="chip"><i data-icon="sparkles"></i> Légende</span></figcaption>
+        </figure>
+      </div>
+      <ol class="values">
+        <li class="reveal"><i data-icon="star"></i><span>01</span><h3>Valeur</h3><p>Une phrase.</p></li>
+        <li class="reveal"><i data-icon="check"></i><span>02</span><h3>Valeur</h3><p>Une phrase.</p></li>
+        <li class="reveal"><i data-icon="compass"></i><span>03</span><h3>Valeur</h3><p>Une phrase.</p></li>
+        <li class="reveal"><i data-icon="shield"></i><span>04</span><h3>Valeur</h3><p>Une phrase.</p></li>
+      </ol>
+    </section>
+
+    <!-- ========== OPTIONNEL : « vidéo au scroll » (séquence d'images) ==========
+         Mettre data-count au nombre d'images de public/seq/ (0 = section masquée). -->
+    <section class="seq" data-count="0" data-pattern="/seq/f_%04d.jpg">
+      <canvas aria-hidden="true"></canvas>
+      <div class="seq__copy"><p class="eyebrow">Sur-titre</p><h2 class="title title--light">Ce qui se passe à l'écran</h2></div>
+    </section>
+
+    <!-- ========== OFFRE : cartes en défilement horizontal ========== -->
+    <section class="cards" id="offre">
+      <div class="cards__pin">
+        <div class="cards__head">
+          <p class="eyebrow eyebrow--brand">Offre</p>
+          <h2 class="title blur-text">Titre de la section</h2>
+        </div>
+        <div class="cards__track">
+          <article class="card"><div class="card__media"><img src="/img/photo-3.jpg" alt="" loading="lazy" /><img src="/img/photo-4.jpg" alt="" loading="lazy" /></div><div class="card__body"><span class="tag tag--brand">Étiquette</span><h3>Élément 1</h3><p>Description courte.</p></div></article>
+          <article class="card"><div class="card__media"><img src="/img/photo-2.jpg" alt="" loading="lazy" /></div><div class="card__body"><span class="tag">Étiquette</span><h3>Élément 2</h3><p>Description courte.</p></div></article>
+          <article class="card"><div class="card__media"><img src="/img/photo-4.jpg" alt="" loading="lazy" /></div><div class="card__body"><span class="tag">Étiquette</span><h3>Élément 3</h3><p>Description courte.</p></div></article>
+          <article class="card"><div class="card__media"><img src="/img/photo-1.jpg" alt="" loading="lazy" /></div><div class="card__body"><span class="tag">Étiquette</span><h3>Élément 4</h3><p>Description courte.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SERVICES : liste + image qui suit le curseur ========== -->
+    <section class="services" id="services">
+      <p class="eyebrow eyebrow--brand">Services</p>
+      <h2 class="title blur-text">Titre de la section services</h2>
+      <ul class="svc-list">
+        <li class="svc" data-img="/img/photo-1.jpg"><span class="svc__num">01</span><i data-icon="calendar"></i><h3>Service</h3><p>Une phrase.</p><img class="svc__thumb" src="/img/photo-1.jpg" alt="" loading="lazy" /></li>
+        <li class="svc" data-img="/img/photo-2.jpg"><span class="svc__num">02</span><i data-icon="clock"></i><h3>Service</h3><p>Une phrase.</p><img class="svc__thumb" src="/img/photo-2.jpg" alt="" loading="lazy" /></li>
+        <li class="svc" data-img="/img/photo-3.jpg"><span class="svc__num">03</span><i data-icon="user"></i><h3>Service</h3><p>Une phrase.</p><img class="svc__thumb" src="/img/photo-3.jpg" alt="" loading="lazy" /></li>
+      </ul>
+      <div class="svc-follow" aria-hidden="true"><img alt="" /></div>
+    </section>
+
+    <!-- ========== RÉVÉLATION : image qui s'ouvre en plein écran + cartes ========== -->
+    <section class="reveal-media">
+      <div class="reveal-media__pin">
+        <div class="reveal-media__img"><img src="/img/photo-4.jpg" alt="" loading="lazy" /></div>
+        <div class="reveal-media__title"><p class="eyebrow">Sur-titre</p><h2 class="title title--light">Une expérience à part</h2></div>
+      </div>
+      <ul class="features">
+        <li class="spot spot--dark reveal"><i data-icon="sparkles"></i><h3>Atout</h3><p>Une phrase.</p></li>
+        <li class="spot spot--dark reveal"><i data-icon="shield"></i><h3>Atout</h3><p>Une phrase.</p></li>
+        <li class="spot spot--dark reveal"><i data-icon="user"></i><h3>Atout</h3><p>Une phrase.</p></li>
+      </ul>
+    </section>
+
+    <!-- ========== PARTENAIRES / CLIENTS : bande de logos ========== -->
+    <section class="partners" aria-label="Partenaires">
+      <p class="partners__label">Ils nous font confiance</p>
+      <div class="logo-loop"><div class="logo-loop__track">
+        <img src="/img/logo.png" alt="Partenaire" /><img src="/img/logo.png" alt="Partenaire" /><img src="/img/logo.png" alt="Partenaire" /><img src="/img/logo.png" alt="Partenaire" />
+      </div></div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER : CTA photo + colonnes + contacts (jamais le nom de la marque en géant) ========== -->
+  <footer class="footer" id="contact">
+    <div class="footer__cta">
+      <img src="/img/photo-1.jpg" alt="" loading="lazy" />
+      <div class="footer__cta-body">
+        <p class="eyebrow">Sur-titre</p>
+        <h2 class="title title--light">Appel à l'action final</h2>
+        <div class="footer__cta-actions">
+          <a class="btn btn--accent magnet" href="#">Action principale <i data-icon="arrowUp"></i></a>
+          <a class="btn btn--glass" href="#"><i data-icon="whatsapp"></i> WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__main">
+      <div class="footer__brand">
+        <img src="/img/logo.png" alt="Marque" />
+        <p>Une phrase qui résume la marque.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook"><i data-icon="facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i data-icon="instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i data-icon="linkedin"></i></a>
+        </div>
+      </div>
+      <div class="footer__col"><h4>Découvrir</h4><a href="#apropos">À propos</a><a href="#offre">Offre</a><a href="#services">Services</a></div>
+      <div class="footer__col"><h4>Informations</h4><a href="#">FAQ</a><a href="#">Mentions légales</a></div>
+      <div class="footer__col footer__contact">
+        <h4>Contact</h4>
+        <a href="tel:+000000000"><i data-icon="call"></i>+00 00 00 00 00</a>
+        <a href="mailto:contact@exemple.com"><i data-icon="mail"></i>contact@exemple.com</a>
+        <a href="#"><i data-icon="location"></i>Ville, Pays</a>
+      </div>
+    </div>
+    <div class="footer__bottom"><p>© 2026 Marque</p><p>Accroche</p></div>
+    <div class="brand-stripe" aria-hidden="true"><span></span><span></span><span></span></div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
