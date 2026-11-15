@@ -4,7 +4,7 @@
 
 ## Ce que tu installes
 
-11 skills, dans le dossier de skills **personnel** de l'utilisateur (disponibles dans tous ses projets) :
+12 skills, dans le dossier de skills **personnel** de l'utilisateur (disponibles dans tous ses projets) :
 
 | Skill | Rôle |
 |---|---|
@@ -16,6 +16,7 @@
 | `paypal` | Paiement PayPal + carte bancaire dans la page |
 | `fedapay` | Mobile Money + carte avec FedaPay (Bénin, Togo, CI, Niger, Sénégal) |
 | `sebpay-integration` | Mobile Money avec SebPay, sans redirection |
+| `saspay-integration` | Mobile Money avec SasPay, en marque blanche (reçus SasPay envoyés sur l'e-mail de l'élève) |
 | `moneyfusion` | MoneyFusion : encaissements et retraits Mobile Money |
 | `moneyfusion-integration` | MoneyFusion intégré dans la page de paiement |
 | `nyole` | Mobile Money avec Nyole / Cartflox (widget SoftPay) |
@@ -46,7 +47,7 @@
      ```
    Un skill du même nom déjà présent est **remplacé** : c'est ainsi que se font les mises à jour. Ne touche à aucun autre skill.
 
-3. **Vérifier** : chaque dossier copié doit contenir un `SKILL.md`. Liste les 11 skills installés à l'utilisateur, avec une phrase sur leur rôle (tableau ci-dessus).
+3. **Vérifier** : chaque dossier copié doit contenir un `SKILL.md`. Liste les 12 skills installés à l'utilisateur, avec une phrase sur leur rôle (tableau ci-dessus).
 
 4. **Nettoyer** le dossier temporaire.
 
@@ -58,5 +59,5 @@
 ## Règles
 
 - N'installe rien d'autre que ces dossiers. Ne lance aucun script contenu dans les skills pendant l'installation.
-- Ne demande jamais de clés API à ce stade : chaque skill de paiement les demandera au moment de l'intégration, et elles iront dans les secrets serveur, jamais dans le chat.
+- Ne demande jamais de clés API à ce stade (ni l'e-mail de réception de SasPay : le skill le demandera à sa première utilisation) : chaque skill de paiement les demandera au moment de l'intégration, et elles iront dans les secrets serveur, jamais dans le chat.
 - Le skill `ui-libraries` clonera lui-même ses bibliothèques open source la première fois qu'il servira : rien à faire maintenant.

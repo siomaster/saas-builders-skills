@@ -25,6 +25,7 @@ Claude s'occupe de tout. Pour mettre à jour, renvoie le même message.
 - `paypal` — PayPal + carte bancaire dans la page
 - `fedapay` — FedaPay : Mobile Money + carte (Bénin, Togo, Côte d'Ivoire, Niger, Sénégal)
 - `sebpay-integration` — SebPay : Mobile Money sans redirection
+- `saspay-integration` — SasPay : Mobile Money dans la page, en marque blanche (tes clients ne voient jamais SasPay, les reçus arrivent sur ton e-mail)
 - `moneyfusion` / `moneyfusion-integration` — MoneyFusion : encaissements, retraits, paiement dans la page
 - `nyole` — Nyole / Cartflox (widget SoftPay)
 
