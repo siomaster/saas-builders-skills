@@ -56,6 +56,23 @@
    - de **redémarrer Claude Code** (fermer puis rouvrir) si les skills n'apparaissent pas encore dans `/skills` ;
    - que pour mettre à jour, il suffit de renvoyer le même lien.
 
+## Installer un seul skill
+
+Si l'élève demande **un seul skill** (ex. « Installe le skill `saspay-integration` »), fais les mêmes étapes, mais copie **uniquement** le dossier `skills/<nom>/` demandé :
+- macOS / Linux :
+  ```bash
+  N=saspay-integration   # nom du skill demandé
+  mkdir -p ~/.claude/skills && rm -rf ~/.claude/skills/"$N" && cp -R "$TMP/sbs/skills/$N" ~/.claude/skills/"$N"
+  ```
+- Windows (PowerShell) :
+  ```powershell
+  $N = "saspay-integration"; $dest = Join-Path $env:USERPROFILE ".claude\skills"; New-Item -ItemType Directory -Force $dest | Out-Null
+  $t = Join-Path $dest $N; if (Test-Path $t) { Remove-Item -Recurse -Force $t }; Copy-Item -Recurse (Join-Path "$TMP\skills" $N) $t
+  ```
+Vérifie que `~/.claude/skills/<nom>/SKILL.md` existe, nettoie le dossier temporaire, puis dis à l'élève en une phrase à quoi sert ce skill et comment le déclencher (ex. « intègre SasPay »). S'il ne le voit pas dans `/skills`, qu'il redémarre Claude Code.
+
+Chaque skill existe aussi en archive à télécharger : `telechargements/<nom>.zip` (à décompresser dans `~/.claude/skills/`).
+
 ## Règles
 
 - N'installe rien d'autre que ces dossiers. Ne lance aucun script contenu dans les skills pendant l'installation.
